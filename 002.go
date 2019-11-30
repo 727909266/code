@@ -48,22 +48,27 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		flag = flag / 10
 	}
 
+	if flag != 0 {
+		cur := &ListNode{Val: flag % 10}
+		pre.Next = cur
+	}
+
 	return head.Next
 }
 
 func main()  {
-	x1 := &ListNode{Val:2}
-	x2 := &ListNode{Val:4}
-	x3 := &ListNode{Val:3}
+	x1 := &ListNode{Val:5}
+	//x2 := &ListNode{Val:4}
+	//x3 := &ListNode{Val:3}
 
 	y1 := &ListNode{Val:5}
-	y2 := &ListNode{Val:6}
-	y3 := &ListNode{Val:4}
-	x1.Next = x2
-	x2.Next = x3
+	//y2 := &ListNode{Val:6}
+	//y3 := &ListNode{Val:4}
+	//x1.Next = x2
+	//x2.Next = x3
 
-	y1.Next = y2
-	y2.Next = y3
+	//y1.Next = y2
+	//y2.Next = y3
 
 	ans := addTwoNumbers(x1, y1)
 	for {

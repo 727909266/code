@@ -33,7 +33,7 @@ func itMaxCount(max int, a []int)(count int) {
 	count = 0
 	subCount := 0
 	for _, v := range a {
-		if max > v {
+		if  v <= max {
 			subCount ++
 			count += subCount
 		} else {

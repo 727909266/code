@@ -33,7 +33,7 @@ func search(nums []int, target int) int {
 	l := 0
 	r := len(nums) - 1
 	for {
-		if l >= r {
+		if l > r {
 			break
 		}
 		mid := (l + r) / 2
@@ -51,6 +51,6 @@ func search(nums []int, target int) int {
 }
 
 func main()  {
-	fmt.Println(search([]int{1,2,3,4,5}, -1))
+	fmt.Println(search([]int{5}, 5))
 
 }
