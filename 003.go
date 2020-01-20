@@ -64,6 +64,14 @@ func max(x, y int) int {
 	}
 }
 
+func min(x, y int) int {
+	if x > y {
+		return y
+	} else {
+		return x
+	}
+}
+
 
 func lengthOfLongestSubstring(s string) int {
 	set := make(map[rune]int, 0)
